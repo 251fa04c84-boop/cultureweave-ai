@@ -11,6 +11,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const brief: CulturalBrief = body.brief;
     const userApiKey: string = body.apiKey || '';
+    const refinementPrompt: string = body.refinementPrompt || '';
 
     if (!brief || !brief.culturalAnchors || brief.culturalAnchors.length === 0) {
       return NextResponse.json(
@@ -22,7 +23,7 @@ export async function POST(req: Request) {
     const qlooClient = new QlooClient({ apiKey: userApiKey });
     const agent = new CultureWeaveAgent(qlooClient);
 
-    const blueprint = await agent.executeDesignPipeline(brief);
+    const blueprint = await agent.executeDesignPipeline(brief, refinementPrompt);
 
     return NextResponse.json({
       success: true,

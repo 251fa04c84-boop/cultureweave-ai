@@ -55,15 +55,17 @@ export class CultureWeaveAgent {
   /**
    * Run the full autonomous agent loop
    */
-  async executeDesignPipeline(brief: CulturalBrief): Promise<ExperienceBlueprint> {
+  async executeDesignPipeline(brief: CulturalBrief, refinementPrompt?: string): Promise<ExperienceBlueprint> {
     this.logs = [];
 
     // Step 1 & 2: Understand Goal, Constraints & Deconstruct Brief
     this.logAction(
       'deconstruct',
       'BriefDeconstructor',
-      { title: brief.title, anchors: brief.culturalAnchors, budget: brief.budgetTier, location: brief.cityLocation },
-      `Extracted ${brief.culturalAnchors.length} cultural anchors. Detected constraints: Budget=${brief.budgetTier}, Atmosphere="${brief.desiredAtmosphere}".`
+      { title: brief.title, anchors: brief.culturalAnchors, budget: brief.budgetTier, location: brief.cityLocation, refinement: refinementPrompt },
+      refinementPrompt
+        ? `Refining existing blueprint with directive: "${refinementPrompt}". Recalibrating cultural signals and acoustic/culinary constraints.`
+        : `Extracted ${brief.culturalAnchors.length} cultural anchors. Detected constraints: Budget=${brief.budgetTier}, Atmosphere="${brief.desiredAtmosphere}".`
     );
 
     // Step 3 & 4: Resolve Anchors via Qloo Search

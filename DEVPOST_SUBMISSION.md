@@ -8,7 +8,11 @@ Autonomous AI agent powered by Qloo Taste Graph™ that designs authentic, cultu
 
 ---
 
-## 🌟 Inspiration
+## Public Demo URL
+https://cultureweave-ai.vercel.app
+
+## Public GitHub Repository
+https://github.com/251fa04c84-boop/cultureweave-ai
 > *"Agents are getting smarter, but they're culturally blind."*
 
 Large Language Models (LLMs) can write eloquent poetry and debug complex code, but they have zero grounded understanding of authentic human taste and subcultural affinities. When you ask a generic AI to design an event for "anime and hip-hop enthusiasts," it regurgitates shallow, reductive stereotypes: pink plastic paper lanterns, grocery-store spicy tuna sushi, and commercial Top 40 trap music. 

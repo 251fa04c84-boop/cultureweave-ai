@@ -3,9 +3,13 @@
 > **Submitted to the Qloo Agentic Hackathon 2026 — *"Agents, but with taste."***
 
 [![MIT License](https://img.shields.io/badge/License-MIT-amber.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-cultureweave--ai.vercel.app-blue.svg)](https://cultureweave-ai.vercel.app)
 [![Next.js](https://img.shields.io/badge/Framework-Next.js%2014-black.svg)](https://nextjs.org/)
 [![Qloo API](https://img.shields.io/badge/Cultural%20AI-Qloo%20Taste%20Graph-orange.svg)](https://docs.qloo.com/)
 [![Test Status](https://img.shields.io/badge/E2E%20Tests-100%25%20Verified-brightgreen.svg)](scripts/e2e-test.mjs)
+
+> 🚀 **Live Demo:** [https://cultureweave-ai.vercel.app](https://cultureweave-ai.vercel.app)  
+> 📦 **GitHub Repository:** [https://github.com/251fa04c84-boop/cultureweave-ai](https://github.com/251fa04c84-boop/cultureweave-ai)
 
 ---
 
